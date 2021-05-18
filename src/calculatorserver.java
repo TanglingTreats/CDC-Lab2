@@ -16,7 +16,7 @@ public class calculatorserver {
 			// Construct a new CalculatorImpl object and bind it to the local rmiregistry
 			// N.b. it is possible to host multiple objects on a server
 			calculator c = new calculatorimpl();
-			Naming.rebind("rebind://localhost/CalculatorService", c);
+			Naming.rebind("rmi://localhost/CalculatorService", c);
 
 		} catch (Exception e) {
 			System.out.println("Server Error: " + e);

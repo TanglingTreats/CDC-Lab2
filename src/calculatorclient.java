@@ -29,11 +29,16 @@ public class calculatorclient {
 		try {
 
 			// Create the reference to the remote object through the remiregistry
-
+			calculator c = (calculator) Naming.lookup("rmi://localhost/CalculatorService");
 			// Naming.lookup("rmi://localhost/CalculatorService");
 
 			// Now use the reference c to call remote methods
 			// e.g., call c.add(3, 21) where c is the instance of the remote object
+			System.out.println("3+21="+c.add(3, 21));
+			System.out.println("18-9="+c.sub(18, 9));
+			System.out.println("4*17="+c.mul(4, 17));
+			System.out.println("70/10="+c.div(70, 10));
+			System.out.println("2^5="+c.pow(2, 5));
 
 		}
 		// Catch the exceptions that may occur - rubbish URL, Remote exception

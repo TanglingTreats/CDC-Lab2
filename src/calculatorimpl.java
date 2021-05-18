@@ -11,7 +11,7 @@ public class calculatorimpl extends java.rmi.server.UnicastRemoteObject implemen
 	// Implementations must have an explicit constructor
 	// in order to declare the RemoteException exception
 
-	String messageTemplate = "Performing %s: %i %s %i";
+	String messageTemplate = "Performing %s: %d %s %d";
 
 	public calculatorimpl() throws java.rmi.RemoteException {
 		super();
